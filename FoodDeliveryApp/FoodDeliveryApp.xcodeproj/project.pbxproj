@@ -28,6 +28,7 @@
 		05BCB8602B84B20200C27885 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05BCB8532B84B20200C27885 /* Roboto-Black.ttf */; };
 		05BCB8622B84B4F600C27885 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB8612B84B4F600C27885 /* UIColor+Extension.swift */; };
 		05BCB8642B84B5FE00C27885 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB8632B84B5FE00C27885 /* AppColors.swift */; };
+		05BCB8692B8608F700C27885 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB8682B8608F700C27885 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		05BCB8532B84B20200C27885 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		05BCB8612B84B4F600C27885 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		05BCB8632B84B5FE00C27885 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		05BCB8682B8608F700C27885 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		05BCB82A2B84989700C27885 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				05BCB8652B8608C600C27885 /* NavigationLayer */,
 				05BCB83F2B84A64700C27885 /* Resources */,
 				05BCB82B2B84989700C27885 /* AppDelegate.swift */,
 				05BCB82D2B84989700C27885 /* SceneDelegate.swift */,
@@ -142,6 +145,30 @@
 				05BCB8532B84B20200C27885 /* Roboto-Black.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		05BCB8652B8608C600C27885 /* NavigationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				05BCB8672B8608E300C27885 /* Coordinators */,
+				05BCB8662B8608D600C27885 /* Controllers */,
+			);
+			path = NavigationLayer;
+			sourceTree = "<group>";
+		};
+		05BCB8662B8608D600C27885 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		05BCB8672B8608E300C27885 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				05BCB8682B8608F700C27885 /* Coordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +260,7 @@
 				05BCB8642B84B5FE00C27885 /* AppColors.swift in Sources */,
 				05BCB82E2B84989700C27885 /* SceneDelegate.swift in Sources */,
 				05BCB8622B84B4F600C27885 /* UIColor+Extension.swift in Sources */,
+				05BCB8692B8608F700C27885 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
