@@ -16,7 +16,7 @@ class ProfileCoordinator: Coordinator {
     }
     
     override func finish() {
-        print("AppCoordinator finish")
+        print("ProfileCoordinator finish")
     }
  
 }

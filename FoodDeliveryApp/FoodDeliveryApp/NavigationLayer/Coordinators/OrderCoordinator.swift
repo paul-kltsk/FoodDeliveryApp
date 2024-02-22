@@ -16,7 +16,7 @@ class OrderCoordinator: Coordinator {
     }
     
     override func finish() {
-        print("AppCoordinator finish")
+        print("OrderCoordinator finish")
     }
  
 }
