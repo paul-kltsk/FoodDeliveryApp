@@ -16,7 +16,7 @@ class ListCoordinator: Coordinator {
     }
     
     override func finish() {
-        print("AppCoordinator finish")
+        print("ListCoordinator finish")
     }
  
 }
