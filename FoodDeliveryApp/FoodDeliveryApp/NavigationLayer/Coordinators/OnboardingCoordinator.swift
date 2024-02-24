@@ -22,7 +22,7 @@ class OnboardingCoordinator: Coordinator {
 private extension OnboardingCoordinator {
     
     func showOnboarding() {
-        var pages = [UIViewController]()
+        var pages = [OnboardingPartViewController]()
         let firstVC = OnboardingPartViewController()
         firstVC.image = UIImage(resource: .chikenleg)
         firstVC.titleText = "Delicious Food"
@@ -42,7 +42,7 @@ private extension OnboardingCoordinator {
         fourthVC.image = UIImage(resource: .creditcard)
         fourthVC.titleText = "Payment Online"
         fourthVC.descriptionText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui ultricies sit massa."
-
+        
         pages.append(firstVC)
         pages.append(secondVC)
         pages.append(thirdVC)
