@@ -29,11 +29,10 @@ class OnboardingPartViewController: UIViewController {
     }
     
     
-    
     //MARK: - Views
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
-    private let descriptionLabel = UILabel() 
+    private let descriptionLabel = UILabel()
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -103,5 +102,6 @@ private extension OnboardingPartViewController {
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
         ])
     }
+    
     
 }
