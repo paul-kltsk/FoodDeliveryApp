@@ -18,7 +18,7 @@ class OnboardingViewController: UIViewController {
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private let pageControl = UIPageControl()
     private let bottomButton = UIButton()
-    weak var viewOutput: OnboardingViewOutput!
+    var viewOutput: OnboardingViewOutput!
      
     init(pages: [OnboardingPartViewController] = [OnboardingPartViewController]() , viewOutput: OnboardingViewOutput!) {
         super.init(nibName: nil, bundle: nil)
@@ -45,6 +45,28 @@ class OnboardingViewController: UIViewController {
 
 }
 
+//MARK: - Actions
+private extension OnboardingViewController {
+    @objc func buttonPressed() {
+        switch pageControl.currentPage {
+            case 0:
+                pageControl.currentPage = 1
+                pageViewController.setViewControllers([pages[1]], direction: .forward, animated: true)
+            case 1:
+                pageControl.currentPage = 2
+                pageViewController.setViewControllers([pages[2]], direction: .forward, animated: true)
+            case 2:
+                pageControl.currentPage = 3
+                pageViewController.setViewControllers([pages[3]], direction: .forward, animated: true)
+                bottomButton.setTitle("Cool!", for: .normal)
+            case 3:
+                print("Exit")
+                viewOutput.onboardingFinish()
+            default: break
+        }
+    }
+}
+
 //MARK: - Layout
 private extension OnboardingViewController {
     
@@ -55,7 +77,8 @@ private extension OnboardingViewController {
         bottomButton.titleLabel?.font = .Roboto.bold.size(of: 18)
         bottomButton.setTitleColor(AppColors.black, for: .normal)
         bottomButton.setTitle("Next", for: .normal)
-        bottomButton.layer.cornerRadius = 16
+        bottomButton.layer.cornerRadius = 20
+        bottomButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         NSLayoutConstraint.activate([
             bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
@@ -110,15 +133,21 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
 
 //MARK: - UIPageViewControllerDelegate delegate
 extension OnboardingViewController: UIPageViewControllerDelegate {
+    
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        
         if let index = pages.firstIndex(of: pendingViewControllers.first! as! OnboardingPartViewController) {
             currentPageIndex = index
         }
     }
+    
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
         if completed {
             pageControl.currentPage = currentPageIndex
             currentPageIndex == 3 ? bottomButton.setTitle("Cool!", for: .normal) : bottomButton.setTitle("Next", for: .normal)
         }
     }
+    
 }
+ 
