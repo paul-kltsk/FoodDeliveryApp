@@ -9,13 +9,17 @@ import UIKit
 
 class AppCoordinator: Coordinator {
     
+    private let userStorage = UserStorage.shared
+    
     override func start() {
-        showOnboardingFlow()
-//        showMainFlow()
+        
+        userStorage.passOnboarding ? showMainFlow() : showOnboardingFlow()
+
     }
     
     override func finish() {
         print("AppCoordinator finish")
+        finishDelegate?.coordinatorFinish(childCoordinator: self)
     }
  
 }
@@ -91,7 +95,10 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         removeChildCoordinator(childCoordinator)
         
         switch childCoordinator.type {
-        case .app: 
+        case .onboarding:
+            navigationController?.viewControllers.removeAll()
+            showMainFlow()
+        case .app:
             return
         default:
             navigationController?.popToRootViewController(animated: false)
