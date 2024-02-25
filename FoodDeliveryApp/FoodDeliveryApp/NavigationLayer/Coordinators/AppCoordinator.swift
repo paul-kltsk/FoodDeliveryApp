@@ -12,8 +12,8 @@ class AppCoordinator: Coordinator {
     private let userStorage = UserStorage.shared
     
     override func start() {
-        
-        userStorage.passOnboarding ? showMainFlow() : showOnboardingFlow()
+        showOnboardingFlow()
+//        userStorage.passOnboarding ? showMainFlow() : showOnboardingFlow()
 
     }
     

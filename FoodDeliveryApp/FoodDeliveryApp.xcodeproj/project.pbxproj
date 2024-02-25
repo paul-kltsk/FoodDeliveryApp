@@ -40,6 +40,7 @@
 		05BCB87D2B8786FA00C27885 /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB87C2B8786FA00C27885 /* OnboardingViewPresenter.swift */; };
 		05BCB87F2B879A0600C27885 /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB87E2B879A0500C27885 /* OnboardingPartViewController.swift */; };
 		05F6663A2B8BCE8900E0D838 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F666392B8BCE8900E0D838 /* UserStorage.swift */; };
+		05F6663D2B8BF0CD00E0D838 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F6663C2B8BF0CD00E0D838 /* SceneFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		05BCB87C2B8786FA00C27885 /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
 		05BCB87E2B879A0500C27885 /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		05F666392B8BCE8900E0D838 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		05F6663C2B8BF0CD00E0D838 /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		05BCB8782B87865C00C27885 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				05F6663B2B8BF0BE00E0D838 /* SceneFactory */,
 				05BCB8792B87867E00C27885 /* Onboarding */,
 			);
 			path = UILayer;
@@ -226,6 +229,14 @@
 				05F666392B8BCE8900E0D838 /* UserStorage.swift */,
 			);
 			path = ServicesLayer;
+			sourceTree = "<group>";
+		};
+		05F6663B2B8BF0BE00E0D838 /* SceneFactory */ = {
+			isa = PBXGroup;
+			children = (
+				05F6663C2B8BF0CD00E0D838 /* SceneFactory.swift */,
+			);
+			path = SceneFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 				05BCB86F2B866DE700C27885 /* HomeCoordinator.swift in Sources */,
 				05BCB8772B866EBA00C27885 /* TabBarController.swift in Sources */,
 				05F6663A2B8BCE8900E0D838 /* UserStorage.swift in Sources */,
+				05F6663D2B8BF0CD00E0D838 /* SceneFactory.swift in Sources */,
 				05BCB8622B84B4F600C27885 /* UIColor+Extension.swift in Sources */,
 				05BCB87D2B8786FA00C27885 /* OnboardingViewPresenter.swift in Sources */,
 				05BCB8692B8608F700C27885 /* Coordinator.swift in Sources */,
