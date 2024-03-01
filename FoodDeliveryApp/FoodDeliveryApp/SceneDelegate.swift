@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct ScreenSize {
+    static let height = UIScreen.main.bounds.height
+    static let width = UIScreen.main.bounds.width
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

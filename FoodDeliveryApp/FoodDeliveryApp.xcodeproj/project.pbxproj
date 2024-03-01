@@ -41,6 +41,8 @@
 		05BCB87F2B879A0600C27885 /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB87E2B879A0500C27885 /* OnboardingPartViewController.swift */; };
 		05F6663A2B8BCE8900E0D838 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F666392B8BCE8900E0D838 /* UserStorage.swift */; };
 		05F6663D2B8BF0CD00E0D838 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F6663C2B8BF0CD00E0D838 /* SceneFactory.swift */; };
+		05F6669D2B90766600E0D838 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F6669C2B90766600E0D838 /* LoginViewController.swift */; };
+		05F666A22B9077B500E0D838 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F666A12B9077B500E0D838 /* BottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		05BCB87E2B879A0500C27885 /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		05F666392B8BCE8900E0D838 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		05F6663C2B8BF0CD00E0D838 /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
+		05F6669C2B90766600E0D838 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		05F666A12B9077B500E0D838 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,20 +211,21 @@
 		05BCB8782B87865C00C27885 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				05F6669B2B9075F800E0D838 /* AuthScene */,
 				05F6663B2B8BF0BE00E0D838 /* SceneFactory */,
-				05BCB8792B87867E00C27885 /* Onboarding */,
+				05BCB8792B87867E00C27885 /* OnboardingScene */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
 		};
-		05BCB8792B87867E00C27885 /* Onboarding */ = {
+		05BCB8792B87867E00C27885 /* OnboardingScene */ = {
 			isa = PBXGroup;
 			children = (
 				05BCB87A2B8786A600C27885 /* OnboardingViewController.swift */,
 				05BCB87C2B8786FA00C27885 /* OnboardingViewPresenter.swift */,
 				05BCB87E2B879A0500C27885 /* OnboardingPartViewController.swift */,
 			);
-			path = Onboarding;
+			path = OnboardingScene;
 			sourceTree = "<group>";
 		};
 		05F666382B8BCE5E00E0D838 /* ServicesLayer */ = {
@@ -237,6 +242,39 @@
 				05F6663C2B8BF0CD00E0D838 /* SceneFactory.swift */,
 			);
 			path = SceneFactory;
+			sourceTree = "<group>";
+		};
+		05F6669B2B9075F800E0D838 /* AuthScene */ = {
+			isa = PBXGroup;
+			children = (
+				05F666A02B90778500E0D838 /* Presenters */,
+				05F6669F2B90777D00E0D838 /* Controllers */,
+				05F6669E2B90777700E0D838 /* Views */,
+			);
+			name = AuthScene;
+			sourceTree = "<group>";
+		};
+		05F6669E2B90777700E0D838 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05F666A12B9077B500E0D838 /* BottomView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		05F6669F2B90777D00E0D838 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05F6669C2B90766600E0D838 /* LoginViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		05F666A02B90778500E0D838 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +368,7 @@
 				05BCB86D2B860EB700C27885 /* OnboardingCoordinator.swift in Sources */,
 				05BCB86B2B860D6600C27885 /* AppCoordinator.swift in Sources */,
 				05BCB8712B866DF500C27885 /* OrderCoordinator.swift in Sources */,
+				05F6669D2B90766600E0D838 /* LoginViewController.swift in Sources */,
 				05BCB87B2B8786A600C27885 /* OnboardingViewController.swift in Sources */,
 				05BCB82E2B84989700C27885 /* SceneDelegate.swift in Sources */,
 				05BCB8752B866E1000C27885 /* ProfileCoordinator.swift in Sources */,
@@ -339,6 +378,7 @@
 				05F6663A2B8BCE8900E0D838 /* UserStorage.swift in Sources */,
 				05F6663D2B8BF0CD00E0D838 /* SceneFactory.swift in Sources */,
 				05BCB8622B84B4F600C27885 /* UIColor+Extension.swift in Sources */,
+				05F666A22B9077B500E0D838 /* BottomView.swift in Sources */,
 				05BCB87D2B8786FA00C27885 /* OnboardingViewPresenter.swift in Sources */,
 				05BCB8692B8608F700C27885 /* Coordinator.swift in Sources */,
 			);
