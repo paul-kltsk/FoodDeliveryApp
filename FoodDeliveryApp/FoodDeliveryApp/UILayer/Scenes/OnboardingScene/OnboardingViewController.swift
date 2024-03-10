@@ -17,7 +17,7 @@ class OnboardingViewController: UIViewController {
     //MARK: - Views
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private let pageControl = UIPageControl()
-    private let bottomButton = FBButton()
+    private let bottomButton = FDButton()
     var viewOutput: OnboardingViewOutput!
      
     init(pages: [OnboardingPartViewController] = [OnboardingPartViewController]() , viewOutput: OnboardingViewOutput!) {

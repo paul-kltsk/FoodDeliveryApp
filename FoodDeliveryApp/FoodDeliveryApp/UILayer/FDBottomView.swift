@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BottomView: UIView {
+class FDBottomView: UIView {
     
     //MARK: - Properties
     private let width = ScreenSize.width //414 in figma
@@ -39,9 +39,9 @@ class BottomView: UIView {
 
 }
 
-private extension BottomView {
+private extension FDBottomView {
     func setupLayout(){
-        backgroundColor = .systemGray6
+        backgroundColor = .white
         setupLineView()
         setupLabel()
         setupMealImageView()
@@ -123,7 +123,7 @@ private extension BottomView {
 }
 
 // MARK: - button actions
-private extension BottomView {
+private extension FDBottomView {
     
     @objc func facebookButtonTapped() {
         facebookButtonAction?()

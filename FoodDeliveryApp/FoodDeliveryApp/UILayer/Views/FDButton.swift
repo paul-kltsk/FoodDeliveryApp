@@ -7,19 +7,19 @@
 
 import UIKit
 
-enum FBButtonColorSchemes {
-    case white
+enum FDButtonColorSchemes {
+    case white 
     case orange
     case gray
 }
 
-class FBButton: UIView {
+class FDButton: UIView {
     
     private let button = UIButton()
     
     var action: (() -> Void)?
     
-    var schemes: FBButtonColorSchemes = .white {
+    var schemes: FDButtonColorSchemes = .white {
         didSet {
             setColorScheme(scheme: schemes)
         }
@@ -27,7 +27,7 @@ class FBButton: UIView {
     
     
     // MARK: - Lifecycle
-    init(scheme: FBButtonColorSchemes = .white) {
+    init(scheme: FDButtonColorSchemes = .white) {
         super.init(frame: .zero)
         self.schemes = scheme
         setupLayout()
@@ -63,7 +63,7 @@ class FBButton: UIView {
         action()
     }
     
-    private func setColorScheme(scheme: FBButtonColorSchemes) {
+    private func setColorScheme(scheme: FDButtonColorSchemes) {
         switch scheme {
         case .white:
             button.backgroundColor = AppColors.white
