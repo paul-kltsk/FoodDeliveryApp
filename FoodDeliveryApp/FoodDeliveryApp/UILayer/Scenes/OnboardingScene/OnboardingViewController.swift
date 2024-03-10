@@ -17,7 +17,7 @@ class OnboardingViewController: UIViewController {
     //MARK: - Views
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     private let pageControl = UIPageControl()
-    private let bottomButton = UIButton()
+    private let bottomButton = FBButton()
     var viewOutput: OnboardingViewOutput!
      
     init(pages: [OnboardingPartViewController] = [OnboardingPartViewController]() , viewOutput: OnboardingViewOutput!) {
@@ -58,7 +58,7 @@ private extension OnboardingViewController {
             case 2:
                 pageControl.currentPage = 3
                 pageViewController.setViewControllers([pages[3]], direction: .forward, animated: true)
-                bottomButton.setTitle("Cool!", for: .normal)
+                bottomButton.setTitle(title: "Cool!")
             case 3:
                 print("Exit")
                 viewOutput.onboardingFinish()
@@ -73,12 +73,10 @@ private extension OnboardingViewController {
     func setupBottomButton() {
         view.addSubview(bottomButton)
         bottomButton.translatesAutoresizingMaskIntoConstraints = false
-        bottomButton.backgroundColor = AppColors.gray
-        bottomButton.titleLabel?.font = .Roboto.bold.size(of: 18)
-        bottomButton.setTitleColor(AppColors.black, for: .normal)
-        bottomButton.setTitle("Next", for: .normal)
-        bottomButton.layer.cornerRadius = 20
-        bottomButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        bottomButton.setTitle(title: "Next")
+        bottomButton.action = buttonPressed
+        bottomButton.schemes = .gray
+        
         NSLayoutConstraint.activate([
             bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
@@ -145,7 +143,7 @@ extension OnboardingViewController: UIPageViewControllerDelegate {
         
         if completed {
             pageControl.currentPage = currentPageIndex
-            currentPageIndex == 3 ? bottomButton.setTitle("Cool!", for: .normal) : bottomButton.setTitle("Next", for: .normal)
+            currentPageIndex == 3 ? bottomButton.setTitle(title:"Cool!") : bottomButton.setTitle(title:"Next")
         }
     }
     

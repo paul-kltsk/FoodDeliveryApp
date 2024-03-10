@@ -39,6 +39,7 @@
 		05BCB87B2B8786A600C27885 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB87A2B8786A600C27885 /* OnboardingViewController.swift */; };
 		05BCB87D2B8786FA00C27885 /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB87C2B8786FA00C27885 /* OnboardingViewPresenter.swift */; };
 		05BCB87F2B879A0600C27885 /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BCB87E2B879A0500C27885 /* OnboardingPartViewController.swift */; };
+		05E0E85D2B9DC9A5005CEEC5 /* FBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0E85C2B9DC9A5005CEEC5 /* FBButton.swift */; };
 		05F6663A2B8BCE8900E0D838 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F666392B8BCE8900E0D838 /* UserStorage.swift */; };
 		05F6663D2B8BF0CD00E0D838 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F6663C2B8BF0CD00E0D838 /* SceneFactory.swift */; };
 		05F6669D2B90766600E0D838 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F6669C2B90766600E0D838 /* LoginViewController.swift */; };
@@ -80,6 +81,7 @@
 		05BCB87A2B8786A600C27885 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		05BCB87C2B8786FA00C27885 /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
 		05BCB87E2B879A0500C27885 /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
+		05E0E85C2B9DC9A5005CEEC5 /* FBButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBButton.swift; sourceTree = "<group>"; };
 		05F666392B8BCE8900E0D838 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		05F6663C2B8BF0CD00E0D838 /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		05F6669C2B90766600E0D838 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -211,9 +213,9 @@
 		05BCB8782B87865C00C27885 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
-				05F6669B2B9075F800E0D838 /* AuthScene */,
-				05F6663B2B8BF0BE00E0D838 /* SceneFactory */,
-				05BCB8792B87867E00C27885 /* OnboardingScene */,
+				05E0E85B2B9DC2B0005CEEC5 /* Scenes */,
+				05E0E85A2B9DC28A005CEEC5 /* Factory */,
+				05E0E8592B9DC281005CEEC5 /* Views */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -226,6 +228,31 @@
 				05BCB87E2B879A0500C27885 /* OnboardingPartViewController.swift */,
 			);
 			path = OnboardingScene;
+			sourceTree = "<group>";
+		};
+		05E0E8592B9DC281005CEEC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05E0E85C2B9DC9A5005CEEC5 /* FBButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		05E0E85A2B9DC28A005CEEC5 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				05F6663B2B8BF0BE00E0D838 /* SceneFactory */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		05E0E85B2B9DC2B0005CEEC5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				05F6669B2B9075F800E0D838 /* AuthScene */,
+				05BCB8792B87867E00C27885 /* OnboardingScene */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		05F666382B8BCE5E00E0D838 /* ServicesLayer */ = {
@@ -252,6 +279,7 @@
 				05F6669E2B90777700E0D838 /* Views */,
 			);
 			name = AuthScene;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		05F6669E2B90777700E0D838 /* Views */ = {
@@ -377,6 +405,7 @@
 				05BCB8772B866EBA00C27885 /* TabBarController.swift in Sources */,
 				05F6663A2B8BCE8900E0D838 /* UserStorage.swift in Sources */,
 				05F6663D2B8BF0CD00E0D838 /* SceneFactory.swift in Sources */,
+				05E0E85D2B9DC9A5005CEEC5 /* FBButton.swift in Sources */,
 				05BCB8622B84B4F600C27885 /* UIColor+Extension.swift in Sources */,
 				05F666A22B9077B500E0D838 /* BottomView.swift in Sources */,
 				05BCB87D2B8786FA00C27885 /* OnboardingViewPresenter.swift in Sources */,
