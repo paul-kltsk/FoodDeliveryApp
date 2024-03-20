@@ -53,7 +53,7 @@ private extension FDBottomView {
     func setupLineView() {
         self.addSubview(lineView)
         lineView.translatesAutoresizingMaskIntoConstraints = false
-        lineView.backgroundColor = AppColors.authBottomViewGray.withAlphaComponent(0.3)
+        lineView.backgroundColor = AppColors.bottomViewGray.withAlphaComponent(0.3)
         
         NSLayoutConstraint.activate([
             lineView.topAnchor.constraint(equalTo: self.topAnchor, constant: 7),
@@ -68,7 +68,7 @@ private extension FDBottomView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Or connect with"
         label.font = .Roboto.regular.size(of: 14)
-        label.textColor = AppColors.authBottomViewGray
+        label.textColor = AppColors.bottomViewGray
         label.textAlignment = .left
         
         NSLayoutConstraint.activate([
